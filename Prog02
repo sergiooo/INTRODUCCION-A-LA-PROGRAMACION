@@ -1,0 +1,21 @@
+// Materia    : INTRODUCCION A LA PROGRAMACION
+// Nombre     : SERGIO ANDRES ORTIZ PEREDO
+// Fecha      : 12 DE JULIO 2013
+// Descripcion: Calculo del Area de una circunferencia
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+#include <math.h>
+
+void main()
+{float radio, pi, area;
+printf("\n----------CALCULO DEL AREA DE UNA CIRCUNFERECNIA----------");
+printf("\n----------------------------------------------------------");
+printf("\n\n\n DEFINA RADIO: ");
+scanf("%f", &radio); 
+pi= 3.1416;
+area= pow(radio, 2)*pi;
+printf("\n EL AREA DE LA CIRCUNFERENCIA ES: %f", area);
+ getch();
+}
