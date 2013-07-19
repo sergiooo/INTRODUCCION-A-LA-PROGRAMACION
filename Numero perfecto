@@ -1,0 +1,32 @@
+//Nombre      :Sergio Andres Ortiz.
+//Materia     :Introduccion a la programacion.
+//Fecha       :19 de Julio 2013.
+//Descripcion :programa que determina si un numero es o no perfecto.
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+
+
+void main()
+{int numero,i,suma;
+printf("\n--------------NUMERO PERFECTO--------------\n");
+printf("\n-------------------------------------------\n");
+suma=0;
+do
+{printf("\n\nEscriba un numero natural: ");
+  scanf("%d", &numero);
+ }
+while(numero<=0);
+for(i=1;i<numero;i++)
+ {if(numero%i==0)
+  suma=suma+i;
+ }
+if(numero==suma)
+printf("\n\nEl numero: %d es un numero perfecto.\n\n",numero);
+else
+printf("\n\nEl numero: %d no es un numero perfecto.\n\n",numero);
+printf("\n\nFIN.\n"); 
+printf("\n------------------------------------------\n");  
+getch();
+}
