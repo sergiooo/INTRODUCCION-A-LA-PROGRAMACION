@@ -28,12 +28,13 @@ do
   {case 1:do
          {printf("\nDigite la base: ");
           scanf("%f",&base); 
-  	  printf("\nDigite la altura: ");
+		  printf("\nDigite la altura: ");
 		  scanf("%f",&altura);
 		 }
 		 while(base<0 && altura<0);
 		  triangulo(base,altura,&area);
 		  printf("\nEl area del triangulo es: %f", area);
+		    getch();
 		  break;
   case 2:do
 		  {printf("\nDigite el radio: ");
@@ -42,6 +43,7 @@ do
 		  while(radio<0);
 		  circulo(radio,pi,&area);
 		  printf("\nEl area del circulo es: %f", area);
+		    getch();
 		  break;
   case 3:do
 		  {printf("\nDigite el lado: ");
@@ -50,8 +52,10 @@ do
 		  while(lado<0);
 		  cuadrado(lado,&area);
 		  printf("\nEl area del cuadrado es: %f", area);
+		    getch();
 		  break;
   default:printf("\nDigite opcion correcta: ");
+	        getch();
 	      break;
 
    }
