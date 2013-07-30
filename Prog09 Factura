@@ -24,14 +24,14 @@ void main()
  scanf("%d",&n);
  leervec(codigo,precio,cantidad,n);
  totalpago(precio,cantidad,n,&total);
- printf("---------------------FACTURA-------------------");
+ printf("\n\n-----------------------FACTURA--------------------- \n\n");
  printf("\nCliente: %s ", cliente);
- printf("\nNIT: %d",nit);
- printf("\nCodigo        Precio unit.        Cantidad");
+ printf("\nNIT: %d \n\n",nit);
+ printf("\nCodigo        Precio unit.        Cantidad \n\n");
  mostrarvec(codigo,precio,cantidad,n);
- printf("\n                        Total a pagar: %f",total);
+ printf("\n\n\n                        Total a pagar: %f",total);
 
-     getch();
+    getch();
 }   
 
 void leervec(int codigo[],float precio[],int cantidad[],int n)
@@ -60,3 +60,5 @@ for(i=0;i<n;i++)
   {printf("\n %d          %f          %d", codigo[i], precio[i], cantidad[i]);
   }
 }
+
+
