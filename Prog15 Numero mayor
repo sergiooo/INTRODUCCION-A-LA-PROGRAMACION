@@ -1,0 +1,40 @@
+//Nombre      :Sergio Andres Ortiz.
+//Materia     :Introduccion a la programacion.
+//Fecha       :31 de Julio 2013.
+//Descripcion :Carga 3 numeros y muestra cual es el mayor.
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+
+void main()
+{float numero1, numero2, numero3;
+printf("\nHAllAR EL NUMERO MAYOR \n");
+printf("\n---------------------\n\n");
+printf("ingrese el primer numero\n");
+scanf("%f",&numero1);
+printf("\ningrese el segundo numero\n");
+scanf("%f",&numero2);
+     if(numero1>numero2)
+   {  printf("\ningrese el ultimo numero\n");
+      scanf("%f",&numero3);
+          if(numero1>numero3)
+		  {printf("\nel numero mayor es: %f",numero1);
+		  }
+		  else
+		  {printf("\nel numero mayor es: ");
+		  }
+	 }
+	 else 
+	 {printf("\ningrese el ultimo numero\n");
+	  scanf("%f",&numero3);
+	   if(numero2>numero3)
+		  {printf("\nel numero mayor es: %f",numero2);
+		  }
+		  else
+		  {printf("\nel numero mayor es: %f\n\n",numero3);
+		  }
+	  }
+    getch();
+   }
+ 
