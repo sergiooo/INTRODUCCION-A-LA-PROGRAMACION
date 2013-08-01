@@ -31,6 +31,6 @@ for(i=1;i<n;i++)
 	printf("\ntermino %d=%f", i+1,aux);
     }
 printf("\nSumatoria de %d terminos=%f\n\n\n", n,suma);
-printf("\-------------------------FIN-----------------------\n");
+printf("\-------------------------FIN------------------------\n");
 getch();
 }
