@@ -30,7 +30,7 @@ void gastos_por_dia(float gastosdias[],char *seguir,int n,int*diamayorgasto)
 {float gastos,sumagastos,mayorgasto;
  mayorgasto=0;
  for(int i=1;i<=n;i++)
-  {sumagastos=0;
+  {sumagastos=0;//Se inicializa en 0 cada vez que cambia de dia para borrar los gastos acumulados del dia anterior.
 	  do
      {printf("\n Gastos durante el dia %d: ",i);
 	  scanf("%f",&gastos);
@@ -39,7 +39,7 @@ void gastos_por_dia(float gastosdias[],char *seguir,int n,int*diamayorgasto)
 	  *seguir = tolower(getch());//para convertir cualquier valor tipo char asignado a minusculas.
 	  sumagastos=sumagastos+gastos;
 	 }
-    while(*seguir=='s');//se utiliza''para asiganar valor tipo char.
+    while(*seguir=='s');//se utiliza''para asiganar o connotar un valor tipo char a la variable tipo char.
    gastosdias[i]=sumagastos;
   }
  for(int i=1;i<=n;i++)
