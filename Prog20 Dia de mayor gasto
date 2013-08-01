@@ -1,0 +1,51 @@
+//Nombre      :Sergio Andres Ortiz.
+//Materia     :Introduccion a la programacion.
+//Fecha       :31 de Julio 2013. 
+//Descripcion :Programa que carga los gastos diarios y devuelve el dia en que se gasto más.
+
+#include "stdafx.h"
+#include "conio.h"
+#include "stdio.h"
+#include "ctype.h"
+
+void gastos_por_dia(float gastosdias[],char *seguir,int n,int*diamayorgasto);
+
+void main()
+{float gastosdias[31];char seguir;int dias,diamayorgastos;
+printf("\n------------------CALCULO DEL DIA DE MAYOR GASTO----------------");
+printf("\n----------------------------------------------------------------");
+do
+ {printf("\nCuantos dias quiere registrar: ");
+  scanf("%d",&dias);
+  printf("\n-------------------------------");
+ }
+while(dias<=0 || dias>31);
+gastos_por_dia(gastosdias,&seguir,dias,&diamayorgastos);
+printf("\n\n----------------------------------------------------------------");
+printf("\n El dia de mayor gastos es: %d", diamayorgastos);
+  getch();
+}
+
+void gastos_por_dia(float gastosdias[],char *seguir,int n,int*diamayorgasto)
+{float gastos,sumagastos,mayorgasto;
+ mayorgasto=0;
+ for(int i=1;i<=n;i++)
+  {sumagastos=0;
+	  do
+     {printf("\n Gastos durante el dia %d: ",i);
+	  scanf("%f",&gastos);
+	  printf("\n--->Desea ingresar gastos en el dia %d ? (si 's' o no 'n')\n\n",i);
+	  scanf("%c", &seguir);
+	  *seguir = tolower(getch());//para convertir cualquier valor tipo char asignado a minusculas.
+	  sumagastos=sumagastos+gastos;
+	 }
+    while(*seguir=='s');//se utiliza''para asiganar valor tipo char.
+   gastosdias[i]=sumagastos;
+  }
+ for(int i=1;i<=n;i++)
+ {if(gastosdias[i]>mayorgasto)
+   {mayorgasto=gastosdias[i];
+    *diamayorgasto=i;
+   }  
+ }
+}
